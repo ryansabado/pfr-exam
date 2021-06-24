@@ -1,0 +1,29 @@
+<div class="form-group">
+    <label for="users">Users: </label>
+    <select name="users" #users (change)='getTitles(users.value)'>
+        <option value="">Select Author</option>
+        <option *ngFor="let author of authors" [value]="author.id">{{ author.name }}</option>
+    </select>
+</div>
+
+<p>&nbsp;</p>
+<section>
+<div *ngIf="titles != null">
+    <table>
+        <tr *ngFor="let title of titles"><td>
+            
+            <span><li (click)="showBody(title.id)">{{ title.title}}</li></span>
+        
+        </td></tr>
+    </table>
+</div>
+</section>
+
+<p>&nbsp;</p>
+<section>
+    <div>
+        <blockquote>
+            <em><strong>{{ body }}</strong></em>
+        </blockquote>
+    </div>
+</section>

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    min-height: calc(100vh);
+}
+.content{
+    float: left;
+    position: relative;
+    width: 60%;
+    min-height: calc(100vh - 70px);
+}
+
+.sidebar{
+    float: right;
+    position: relative;
+    width: 30%;
+    background-color: #CCC;
+    min-height: calc(100vh - 80px);
+}
+
+.header{
+    background-color: #EEE;
+}
